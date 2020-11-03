@@ -2,7 +2,33 @@ public class List {
     Element element;
     private Element last;
 
+
     public List() { }
+    public int leng() {
+        int res = 0;
+        Element t = element;
+        while (t != null)
+        {
+            t = t.next;
+            res++;
+        }
+        return res++;
+    }
+
+    void addInPlace(int data) {
+        Element a = new Element();
+        a.Idea = data;
+        int place= leng()/2;
+            int ind=0;
+            Element t = element;
+            while (ind < place ) {
+                t = t.next;
+                ind++;
+            }
+            a.next = t.next;
+            t.next = a;
+
+    }
     public void addFirst(int value)
     {
         if(element==null)
